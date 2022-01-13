@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(9, 1, 14);
+}
+a {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(90deg, rgb(36, 99, 141), rgb(226, 140, 193));
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  line-height: 100px;
+  font-family: sans-serif;
+  color: rgb(223, 198, 198);
+  font-size: 30px;
+  overflow: hidden;
+}
+a > span {
+  position: absolute;
+  background-color: rgb(255, 255, 255);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  animation: rip 0.6s linear infinite;
+  pointer-events: none;
+}
+@keyframes rip {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+  100% {
+    width: 500px;
+    height: 500px;
+    opacity: 0;
+  }
+}
